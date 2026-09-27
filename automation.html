@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5か月目 自働化推進提案</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:32px;
+  font-family:"Yu Gothic","Meiryo",sans-serif;
+  color:#20313f;
+  background:#eef3f6;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.hero{
+  padding:36px;
+  background:linear-gradient(135deg,#12324a,#0b5b8e);
+  color:#fff;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(18,50,74,.18);
+}
+
+.eyebrow{
+  margin:0 0 8px;
+  color:#bfe9e9;
+  font-size:14px;
+  font-weight:700;
+}
+
+.hero h1{
+  margin:0;
+  font-size:36px;
+  line-height:1.4;
+}
+
+.hero p{
+  margin:14px 0 0;
+  color:#ddeaf1;
+  line-height:1.8;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+
+.tag{
+  padding:9px 14px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  font-size:13px;
+  font-weight:700;
+}
+
+.card{
+  margin-top:22px;
+  padding:26px;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(18,50,74,.08);
+}
+
+.section-label{
+  margin:0 0 5px;
+  color:#0c8c8c;
+  font-size:13px;
+  font-weight:800;
+}
+
+h2{
+  margin:0 0 22px;
+  color:#12324a;
+  font-size:25px;
+}
+
+.priority{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.priority-item{
+  padding:20px;
+  border-radius:14px;
+  text-align:center;
+  background:#f8fafc;
+  border-top:5px solid #0c8c8c;
+}
+
+.priority-item strong{
+  display:block;
+  color:#12324a;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.flow{
+  display:grid;
+  grid-template-columns:repeat(7,auto);
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+}
+
+.flow-box{
+  min-width:115px;
+  padding:18px 12px;
+  border:2px solid #0c8c8c;
+  border-radius:14px;
+  background:#f0fdfa;
+  color:#12324a;
+  text-align:center;
+  font-weight:800;
+}
+
+.arrow{
+  color:#f28c28;
+  font-size:25px;
+  font-weight:900;
+}
+
+.investment{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  padding:20px;
+  border-radius:14px;
+  background:#fff7ed;
+  color:#9a4d0b;
+  font-weight:800;
+  font-size:18px;
+}
+
+.top5{
+  display:grid;
+  gap:12px;
+}
+
+.action{
+  display:grid;
+  grid-template-columns:48px 1.5fr 1fr 1fr;
+  gap:14px;
+  align-items:center;
+  padding:16px;
+  border:1px solid #dbe4ea;
+  border-radius:14px;
+  background:#f8fafc;
+}
+
+.rank{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#0b5b8e;
+  color:#fff;
+  font-weight:900;
+}
+
+.action-title{
+  font-weight:800;
+  color:#12324a;
+}
+
+.stage{
+  color:#0c8c8c;
+  font-weight:700;
+}
+
+.score{
+  color:#0b5b8e;
+  font-weight:800;
+  text-align:right;
+}
+
+.roadmap{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.step{
+  padding:20px;
+  border-radius:15px;
+  background:#f8fafc;
+  border-bottom:5px solid #0b5b8e;
+}
+
+.step-number{
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#0c8c8c;
+  color:#fff;
+  font-weight:900;
+}
+
+.step h3{
+  color:#12324a;
+  margin:14px 0 8px;
+}
+
+.step p{
+  margin:0;
+  color:#6b7785;
+  line-height:1.7;
+}
+
+.decision{
+  margin-top:12px;
+  color:#f28c28;
+  font-size:13px;
+  font-weight:800;
+}
+
+.conclusion{
+  margin-top:22px;
+  padding:28px;
+  border-radius:18px;
+  background:#12324a;
+  color:#fff;
+  text-align:center;
+}
+
+.conclusion h2{
+  color:#fff;
+  margin-bottom:12px;
+}
+
+.conclusion p{
+  margin:0;
+  color:#ddeaf1;
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+  body{
+    padding:18px;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .priority,
+  .roadmap{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .flow{
+    grid-template-columns:1fr;
+  }
+
+  .arrow{
+    transform:rotate(90deg);
+    text-align:center;
+  }
+
+  .action{
+    grid-template-columns:42px 1fr;
+  }
+
+  .stage,
+  .score{
+    grid-column:2;
+    text-align:left;
+  }
+}
+
+@media(max-width:560px){
+  .priority,
+  .roadmap{
+    grid-template-columns:1fr;
+  }
+
+  .investment{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="container">
+
+  <section class="hero">
+    <p class="eyebrow">5か月目課題｜自働化推進提案</p>
+    <h1>労働人口減少に備え、<br>自働化を段階的に推進する</h1>
+    <p>
+      名古屋工場のモデル工程で小規模実証し、<br>
+      効果を確認・標準化して他工場へ横展開する。
+    </p>
+
+    <div class="tags">
+      <span class="tag">安全・品質優先</span>
+      <span class="tag">小さく試行</span>
+      <span class="tag">効果後に展開</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="section-label">01　判断基準</p>
+    <h2>安全を起点に、品質・生産性・原価を評価する</h2>
+
+    <div class="priority">
+      <div class="priority-item">
+        <strong>安全</strong>
+        危険・重量・反復作業を削減
+      </div>
+
+      <div class="priority-item">
+        <strong>品質</strong>
+        ポカヨケで誤作業を防止
+      </div>
+
+      <div class="priority-item">
+        <strong>生産性</strong>
+        人を判断・改善業務へ再配置
+      </div>
+
+      <div class="priority-item">
+        <strong>原価</strong>
+        残業・応援・手直しを削減
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="section-label">02　推進の基本方針</p>
+    <h2>工程改善後に、必要な部分だけ自働化する</h2>
+
+    <div class="flow">
+      <div class="flow-box">TPS</div>
+      <div class="arrow">→</div>
+      <div class="flow-box">ECRS</div>
+      <div class="arrow">→</div>
+      <div class="flow-box">標準化</div>
+      <div class="arrow">→</div>
+      <div class="flow-box">見える化</div>
+      <div class="arrow">→</div>
+      <div class="flow-box">DX</div>
+      <div class="arrow">→</div>
+      <div class="flow-box">自働化</div>
+      <div class="arrow">→</div>
+      <div class="flow-box">AI</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="section-label">03　投資判断</p>
+    <h2>低投資・高実現性の施策から着手する</h2>
+
+    <div class="investment">
+      <span>投資ゼロ</span>
+      <span>→</span>
+      <span>少額投資</span>
+      <span>→</span>
+      <span>設備投資</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="section-label">04　改善案 TOP5</p>
+    <h2>効果×実現性で優先順位を設定</h2>
+
+    <div class="top5">
+      <div class="action">
+        <div class="rank">1</div>
+        <div class="action-title">対象工程の選定</div>
+        <div class="stage">TPS・ECRS｜投資ゼロ</div>
+        <div class="score">効果5 × 実現性5</div>
+      </div>
+
+      <div class="action">
+        <div class="rank">2</div>
+        <div class="action-title">作業・判断基準の標準化</div>
+        <div class="stage">標準化｜投資ゼロ</div>
+        <div class="score">効果4 × 実現性5</div>
+      </div>
+
+      <div class="action">
+        <div class="rank">3</div>
+        <div class="action-title">センサー・ポカヨケ導入</div>
+        <div class="stage">自働化｜少額投資</div>
+        <div class="score">効果5 × 実現性4</div>
+      </div>
+
+      <div class="action">
+        <div class="rank">4</div>
+        <div class="action-title">稼働・停止の見える化</div>
+        <div class="stage">見える化・DX｜少額投資</div>
+        <div class="score">効果4 × 実現性4</div>
+      </div>
+
+      <div class="action">
+        <div class="rank">5</div>
+        <div class="action-title">搬送・供給・検査の自働化</div>
+        <div class="stage">自働化・AI｜設備投資</div>
+        <div class="score">効果5 × 実現性3</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="section-label">05　実行ロードマップ</p>
+    <h2>小さく試し、効果を確認して拡大する</h2>
+
+    <div class="roadmap">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>現状調査</h3>
+        <p>工数・停止・不良を測定</p>
+        <div class="decision">次の判断：工程候補を決定</div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>短期試行</h3>
+        <p>標準化・ポカヨケを導入</p>
+        <div class="decision">次の判断：本格投資を判断</div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>本格展開</h3>
+        <p>搬送・供給・検査を自働化</p>
+        <div class="decision">次の判断：投資回収を確認</div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>他工場展開</h3>
+        <p>仕様・標準・教育を共通化</p>
+        <div class="decision">次の判断：横展開を判断</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conclusion">
+    <h2>意思決定のお願い</h2>
+    <p>
+      名古屋工場のモデル工程で、小規模実証を開始する。<br>
+      大規模投資ではなく、現状調査と効果確認から着手する。
+    </p>
+  </section>
+
+</main>
+</body>
+</html>
