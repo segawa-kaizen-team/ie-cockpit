@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>IE改善コックピット</title>
+
+<style>
+body{
+  font-family: Meiryo,sans-serif;
+  background:#f1f5f9;
+  margin:20px;
+}
+
+h1{
+  color:#0f172a;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:220px 220px 300px 1fr;
+  gap:12px;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.alert{
+  background:#fee2e2;
+  border-left:5px solid red;
+  padding:10px;
+  margin-bottom:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>名古屋工場 IE改善コックピット</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>業務入口</h3>
+<p>安全</p>
+<p>品質</p>
+<p>生産性</p>
+<p>在庫</p>
+</div>
+
+<div class="card">
+<h3>対象選択</h3>
+<p>工場：名古屋</p>
+<p>課：製造1課</p>
+<p>工程：全体</p>
+</div>
+
+<div class="card">
+<h3>異常一覧</h3>
+
+<div class="alert">
+成型1号機
+<br>
+生産性92%
+</div>
+
+<div class="alert">
+品質異常
+</div>
+
+</div>
+
+<div class="card">
+<h3>改善判断</h3>
+<p>①TPS</p>
+<p>②ECRS</p>
+<p>③標準化</p>
+<p>④DX</p>
+<p>⑤AI</p>
+</div>
+
+</div>
+
+</body>
+</html>
