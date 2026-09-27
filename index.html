@@ -2,85 +2,165 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>IE改善コックピット</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADS4か月目課題</title>
 
 <style>
+
 body{
-  font-family: Meiryo,sans-serif;
-  background:#f1f5f9;
-  margin:20px;
+    font-family: "Meiryo",sans-serif;
+    background:#f3f6fa;
+    margin:0;
+    padding:30px;
 }
 
-h1{
-  color:#0f172a;
+.container{
+    max-width:1200px;
+    margin:auto;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:220px 220px 300px 1fr;
-  gap:12px;
+.header{
+    background:#17324d;
+    color:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.header h1{
+    margin:0;
 }
 
 .card{
-  background:white;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
+    background:white;
+    margin-top:20px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-.alert{
-  background:#fee2e2;
-  border-left:5px solid red;
-  padding:10px;
-  margin-bottom:10px;
+.flow{
+    text-align:center;
+    margin-top:30px;
 }
+
+.box{
+    width:300px;
+    margin:auto;
+    padding:18px;
+    background:#eff6ff;
+    border:2px solid #2563eb;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.arrow{
+    font-size:40px;
+    color:#2563eb;
+    margin:5px;
+}
+
+ul{
+    line-height:2;
+}
+
+.footer{
+    margin-top:20px;
+    background:#ecfdf5;
+    border-left:6px solid #10b981;
+    padding:20px;
+    border-radius:10px;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<h1>名古屋工場 IE改善コックピット</h1>
+<div class="container">
 
-<div class="grid">
-
-<div class="card">
-<h3>業務入口</h3>
-<p>安全</p>
-<p>品質</p>
-<p>生産性</p>
-<p>在庫</p>
+<div class="header">
+<h1>ADS4か月目課題</h1>
+<h2>自分の画面に記憶を持たせる</h2>
+<p>IE改善コックピットへの記憶機能追加構想</p>
 </div>
 
 <div class="card">
-<h3>対象選択</h3>
-<p>工場：名古屋</p>
-<p>課：製造1課</p>
-<p>工程：全体</p>
+
+<h2>保持するデータ</h2>
+
+<ul>
+<li>改善テーマ</li>
+<li>分類</li>
+<li>状態</li>
+<li>メモ</li>
+</ul>
+
+</div>
+
+<div class="flow">
+
+<div class="box">
+改善テーマ入力
+</div>
+
+<div class="arrow">↓</div>
+
+<div class="box">
+Neon Database
+</div>
+
+<div class="arrow">↓</div>
+
+<div class="box">
+Vercel公開
+</div>
+
+<div class="arrow">↓</div>
+
+<div class="box">
+スマホ・別端末確認
+</div>
+
 </div>
 
 <div class="card">
-<h3>異常一覧</h3>
 
-<div class="alert">
-成型1号機
-<br>
-生産性92%
+<h2>システム構成</h2>
+
+<div style="text-align:center;font-size:28px;line-height:2;">
+
+GitHub<br>
+↓<br>
+Vercel<br>
+↓<br>
+Neon
+
 </div>
 
-<div class="alert">
-品質異常
 </div>
 
-</div>
+<div class="footer">
 
-<div class="card">
-<h3>改善判断</h3>
-<p>①TPS</p>
-<p>②ECRS</p>
-<p>③標準化</p>
-<p>④DX</p>
-<p>⑤AI</p>
+<h2>完成条件</h2>
+
+<ul>
+<li>入力内容が保持される</li>
+<li>リロード後も残る</li>
+<li>別端末でも確認可能</li>
+<li>URLで共有可能</li>
+</ul>
+
+<h2>今後の展開</h2>
+
+<ul>
+<li>生産実績</li>
+<li>停止時間</li>
+<li>改善アクション</li>
+<li>AI改善提案</li>
+<li>Factory DataHub連携</li>
+</ul>
+
 </div>
 
 </div>
